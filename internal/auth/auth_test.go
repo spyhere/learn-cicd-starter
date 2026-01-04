@@ -17,7 +17,7 @@ func TestGetAPIKey(t *testing.T) {
 			name:    "should give 'no authorization header erro'",
 			headers: http.Header{},
 			want:    "",
-			wantErr: false,
+			wantErr: true,
 		},
 		{
 			name:    "should give 'malformed' error when there is no actual key",
